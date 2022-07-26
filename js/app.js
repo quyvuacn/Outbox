@@ -2,15 +2,15 @@ var app = angular.module('OutboxApp', ['ngRoute']);
 
 app.config(function($routeProvider) {
   $routeProvider
-    .when('/', {
+    .when('/mail', {
       controller: 'HomeController',
       templateUrl: 'views/home.html'
     })
-  	.when('/:id', {
+  	.when('/mail/:id', {
       controller: 'EmailController',
       templateUrl: 'views/email.html'
     })
     .otherwise({
-      redirectTo: '/outbox'
+      redirectTo: '/mail'
     });
 });
