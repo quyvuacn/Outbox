@@ -2,11 +2,11 @@ var app = angular.module('OutboxApp', ['ngRoute']);
 
 app.config(function($routeProvider) {
   $routeProvider
-    .when('/outbox', {
+    .when('/', {
       controller: 'HomeController',
       templateUrl: 'views/home.html'
     })
-  	.when('/outbox/:id', {
+  	.when('/:id', {
       controller: 'EmailController',
       templateUrl: 'views/email.html'
     })
